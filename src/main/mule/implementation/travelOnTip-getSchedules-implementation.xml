@@ -19,14 +19,14 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 payload map(value,index)->{
-	"availableSeats": value.availableseats,
-    "departureDateTime": value.departuredate,
+	"availableSeats": value.availableSeats,
+    "departureDateTime": value.departureDateTime,
     "travelRoute": {
       "destinationLocation": {
-        "locationCode": value.tolocation
+        "locationCode": value.toLocation
       },
       "originLocation": {
-        "locationCode": value.fromlocation
+        "locationCode": value.fromLocation
       }
     }
 }]]></ee:set-payload>
